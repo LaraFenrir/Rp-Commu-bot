@@ -9,10 +9,10 @@ const superagent = require("superagent")
 const cuteapi = require("cuteapi")
 const os = require('os');
 const serverStats = {
-  guildID: '576150276474404865',
-  totalUsersID: '576157341217718294',
-  memberCountID: '576157357931757612',
-  botCountID: '576157376730759177'
+  guildID: '566519185312579614',
+  totalUsersID: '577624797899653120',
+  memberCountID: '577624780153421839',
+  botCountID: '577624762067582976'
 };
 const randomPuppy = require('random-puppy');
 const fs = require("fs")
@@ -42,20 +42,17 @@ bot.on("guildMemberAdd", member => {
   bot.channels.get(serverStats.totalUsersID).setName(`Nombre d'utilisateur(s): ${member.guild.memberCount}`)
   bot.channels.get(serverStats.memberCountID).setName(`Nombre de membre(s): ${member.guild.members.filter(m => !m.user.bot).size}`)
   bot.channels.get(serverStats.botCountID).setName(`Nombre de bot(s): ${member.guild.members.filter(m => m.user.bot).size}`)
-  member.guild.channels.find("id", "576150277003149333").send(`:white_check_mark: ${member.user.username} Est arrivé(e) ! Nice ! :p`)
+  member.guild.channels.find("id", "566541019424751617").send(`:white_check_mark: ${member.user.username} Est arrivé(e) ! Nice ! :p`)
   
 })
-bot.on('guildMemberAdd', member => {
-    var roles = member.guild.roles.find('name', 'sans fiche');
-    member.addRole(roles)
-})
+
 
 bot.on("guildMemberRemove", member => {
   if (member.guild.id !== serverStats.guildID) return;  
   bot.channels.get(serverStats.totalUsersID).setName(`Nombre d'utilisateur(s): ${member.guild.memberCount}`)
   bot.channels.get(serverStats.memberCountID).setName(`Nombre de membre(s): ${member.guild.members.filter(m => !m.user.bot).size}`)
   bot.channels.get(serverStats.botCountID).setName(`Nombre de bot(s): ${member.guild.members.filter(m => m.user.bot).size}`)
-  member.guild.channels.find("id", "576150277003149333").send(`:x: ${member.user.username} Est parti(e) le(la) lâche. `)
+  member.guild.channels.find("id", "566541019424751617").send(`:x: ${member.user.username} Est parti(e) le(la) lâche. `)
 })
  
  
