@@ -293,7 +293,7 @@ if(message.content.startsWith(prefix + "sondage")) {
     
     
             let usera = message.mentions.members.first();
-            
+            let args = message.content.split(" ").slice(1);
             let thingToEcho = args.join(" ")
             let sondageChannel = message.guild.channels.find("name", "sondage");
             
