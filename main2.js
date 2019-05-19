@@ -30,7 +30,7 @@ var botenabled = true;
 var storynumber = db.get('histoires').map('story_value').value();
 var dispatcher;
 bot.on('ready', () => {
-  bot.user.setActivity("Les pauvres joueurs de RP-Community [r!help]", {type: "WATCHING"});
+  bot.user.setActivity("Des gens faire de la merde [r!help]", {type: "WATCHING"});
     console.log('Bot Ready !');
 });
 
@@ -193,10 +193,10 @@ if(message.content === prefix + "yuri"){
     .setDescription("Voici le menu d'aide !")
     .setImage("https://cdn.discordapp.com/attachments/508105906261721108/510264359541538826/hyperdimension-neptunia-victory-1.jpg")
     .setThumbnail("https://cdn.discordapp.com/attachments/508105906261721108/510264225180942346/5788f566eafcef6b0d2eafb9ca3a59b5650fec1c_hq.jpg")
-    .addField("Tout marche avec le préfixe r!", "**help:** Affiche ce menu\n**fiche:** a venir lorsque mis à jour.\n**ping:** Permet de voir si je lag.. (Si je lag, faut taper mon développeur, c'est sa faute !)\n**debug (Utilisation développeur.):** Affiche les stats actuelles du bot.\n**ui:** Permet d'avoir des infos sur un utilisateur.\n**dev:** Infos sur mon développeur d'amour ❤\n**roll:** Fait tourner une pièce.\n**chat:** Vous affiche aléatoirement l'image d'un piti chat\n**chien:** Vous affiche aléatoirement l'image d'un piti chien\n**panda:** les pandas c'est la vie !\n**meme:** G3T M3M3D")
+    .addField("Tout marche avec le préfixe r!", "**help:** Affiche ce menu\n**fiche:** a venir lorsque mis à jour.\n**ping:** Permet de voir si je lag.. (Si je lag, faut taper mon développeur, c'est sa faute !)\n**debug (Utilisation développeur.):** Affiche les stats actuelles du bot.\n**ui:** Permet d'avoir des infos sur un utilisateur.\n**dev:** Infos sur mon développeur d'amour ❤\n**roll:** Fait tourner une pièce.\n**ronron:** Vous affiche aléatoirement l'image d'un piti chat\n**chien:** Vous affiche aléatoirement l'image d'un piti chien\n**panda:** les pandas c'est la vie !\n**meme:** G3T M3M3D")
     .addField("Partie Staffs", "**purge:** Pour delet les messages\n**warn @mention raison:** Permet de warn un utilisateur.\n**seewarns @mention:** Voir les warns d'un utilisateur.\n**deletewarns @mention numéro du warn (Utiliser seewarns):** Pour delet un warn.")
     .addField("NSFW channels Only !", "**neko:** Bahhh, une neko (ou deux :D)\n**furry:** Furryyyyyy :D\n**neko2:** Neeeeeeeeeekoooooooooooooooo !!!\n**yuri:**Yuuurrrriii\n**yaoi:** YAAAOIII\n**tetons:** Bahhh, il te faut un dessin ?\n**minou:**Un petit minou tout ras�, ou pas\n**gneko:** Gif de nekoooo NEEKOOOOO :3\n**hentai:** Hum, euhh, mon dev veux pas que j'en parle (lis la note en bas de page de la photo quand tu ferras la commande :3 Mais chuuuttt)\n**trap:** It's a trap !")
-    .addField("Fun", "**chatouille:** AH AH AH AH AH AH AH AH AH **Rigole**\n**hug @mention:** CAAALIIIINNNN :3\n**kiss @mention:** Un bisouuuu :3")
+    .addField("Fun", "**chatouille:** AH AH AH AH AH AH AH AH AH **Rigole**\n**hug @mention:** CAAALIIIINNNN :3\n**kiss @mention:** Un bisouuuu :3\n**slap:** BAM BAM CA DEGAGE")
 
 
 
