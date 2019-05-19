@@ -120,7 +120,26 @@ if(message.content === prefix + "minou"){
 	
 }
 
-    
+    if(message.content.startsWith(prefix + "slap")){
+          if(message.guild === null)return;
+          const user = message.mentions.users.first();
+          if(!user)
+              return message.reply(`Tu te frappe tout seul ? Euhh, j'suis pas d'accord`);
+
+          superagent.get('https://nekos.life/api/v2/img/slap')
+              .end((err, response) => {
+            const lewdembed = new Discord.RichEmbed()
+            .setTitle(user.username + " Viens de ce faire déboiter par" + message.author.username)
+            .setImage(response.body.url)
+            .setColor(`RANDOM`)
+            .setFooter(`BAM BAM CA DEGAGE`)
+            .setURL(response.body.url);
+        message.channel.send({embed: lewdembed});
+          })
+        
+      }
+	    
+	    
 if(message.content === prefix + "gneko"){
    if (!message.channel.nsfw) return message.channel.send(`Oulah doucement, ce n'est pas dans un channel NSFW !`)
     superagent.get('https://nekos.life/api/v2/img/nsfw_neko_gif')
@@ -308,7 +327,7 @@ if(message.content === ("<@523253318038978561> c'est qui le plus beau ?"))
 
 
 
-    if(message.content === prefix + "chat") {
+    if(message.content === prefix + "ronron") {
       let msg = await message.channel.send("En cours...")
 
       let {body} = await superagent
